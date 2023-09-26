@@ -3,38 +3,62 @@ package main
 import (
 	"fmt"
 )
-	const Pi = 3.14159
-	const q = 14
-	const e = 45.99
-	const r = "Book"
-	const w = true
 
+func main() {
 
-func main () {
+	// Раздел 5.
+	// Задание 1.
+	for q := 1; q < 11; q++ {
+		fmt.Println(q)
+	}
 
-	// Раздел 3. Константы. Задание 1.
-    fmt.Println(Pi)
-
-    // Задание 2.
-	const Beta = 100
-	fmt.Println(Beta)
+	// Задание 2.
+	for w := 0; w < 21; w += 2 {
+		fmt.Println(w)
+	}
 
 	// Задание 3.
-    const Pi = 3.11111
-	fmt.Println(Pi, Pi)
+	for e := 0; e < 21; e++ {
+		if e%2 == 0 {
+			continue
+		}
+		fmt.Println(e)
+	}
 
-	// Задание 4.
-	fmt.Println(Pi + e)
-	fmt.Println(e + Pi)
-	fmt.Println(e * Pi)
-	fmt.Println(e / Pi)
+	// Задание 4
+	z := 0
+	for r := 0; r < 100; r++ {
+		z += r
+		if z > 50 {
+			break
+		}
+		fmt.Println(z)
+	}
 
-	// Задание 5.
-	// Константы не могут быть изменены.
+	// Задание 5
+	num := []int{1, 2, 3, 4, 5}
+	for _, numb := range num {
+		fmt.Println(numb)
+	}
 
-	// Задание 6.
-	fmt.Println("Мне", q, "лет")
-	fmt.Println("Размер ноги:", e)
-	fmt.Println("Беру на учёбу:", r)
-	fmt.Println(w)
+	// Задание 6
+	vvv := map[string]int{
+		"Ff": 3,
+		"Fa": 61,
+		"Fd": 39,
+		"Fv": 15,
+	}
+	for x, c := range vvv {
+		fmt.Println(x, c)
+	}
+
+	// Задание 7
+	slice := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	for t, y := range slice {
+		fmt.Println(t, y)
+	}
+	o := "qwertyuiop"
+	for j := 0; j < len(o); j++ {
+		fmt.Printf("%c", o[j])
+	}
 }
